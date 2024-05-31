@@ -12,7 +12,24 @@
 A simple abstract
 \end{abstract}
 
-%% add here some latex code to load the content of  introduction.tex (1 line)	
+%% a# visualization.R
+library(ggplot2)
+
+# Exemple de données
+data <- data.frame(
+  category = c('A', 'B', 'C', 'D'),
+  value = c(3, 12, 5, 18)
+)
+
+# Créer une visualisation non triviale
+p <- ggplot(data, aes(x = category, y = value)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  theme_minimal() +
+  ggtitle("Exemple de visualisation")
+
+# Sauvegarder le graphique
+ggsave("visualization.png", plot = p)
+dd here some latex code to load the content of  introduction.tex (1 line)	
 
 \bibliographystyle{alpha}
 \bibliography{sample}
