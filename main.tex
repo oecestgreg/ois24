@@ -13,6 +13,11 @@ A simple abstract
 \end{abstract}
 
 %% a# visualization.R
+git add main.tex
+git commit -m "Include introduction in main.tex"
+git push origin intro
+
+
 library(ggplot2)
 
 # Exemple de données
@@ -30,6 +35,7 @@ p <- ggplot(data, aes(x = category, y = value)) +
 # Sauvegarder le graphique
 ggsave("visualization.png", plot = p)
 dd here some latex code to load the content of  introduction.tex (1 line)	
+
 
 \bibliographystyle{alpha}
 \bibliography{sample}
